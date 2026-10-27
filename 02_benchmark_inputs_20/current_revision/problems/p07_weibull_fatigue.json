@@ -1,0 +1,35 @@
+{
+  "id": "p07_weibull_fatigue",
+  "description": "Fatigue under an S-N power law: damage (Sa/Sf)^4 must stay below 1. The 4th-power ratio is strongly curved, so FORM mis-linearizes; failure is non-rare.",
+  "source": null,
+  "spec": {
+    "random_variables": [
+      {
+        "name": "Sf",
+        "distribution": "lognormal",
+        "mean": 100.0,
+        "std": 15.0,
+        "description": "fatigue limit (MPa)",
+        "extra_params": {}
+      },
+      {
+        "name": "Sa",
+        "distribution": "weibull",
+        "mean": 50.0,
+        "std": 15.0,
+        "description": "applied stress range (MPa)",
+        "extra_params": {}
+      }
+    ],
+    "limit_state_expr": "1.0 - (Sa / Sf)**4",
+    "correlation": {
+      "matrix": []
+    }
+  },
+  "meta": {
+    "dim": 2,
+    "linearity": "linear",
+    "expected_pf": "~1e-3",
+    "note": "weibull tail"
+  }
+}

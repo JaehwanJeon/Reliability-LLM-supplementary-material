@@ -1,0 +1,35 @@
+{
+  "id": "p14_frechet_wind_extreme",
+  "description": "Extreme wind gust modelled by Frechet (EV Type II). Structural resistance is lognormal. Rare-ish event.",
+  "source": null,
+  "spec": {
+    "random_variables": [
+      {
+        "name": "R",
+        "distribution": "lognormal",
+        "mean": 800.0,
+        "std": 80.0,
+        "description": "wind resistance (kN)",
+        "extra_params": {}
+      },
+      {
+        "name": "W",
+        "distribution": "frechet",
+        "mean": 400.0,
+        "std": 120.0,
+        "description": "extreme wind load (kN)",
+        "extra_params": {}
+      }
+    ],
+    "limit_state_expr": "R - W",
+    "correlation": {
+      "matrix": []
+    }
+  },
+  "meta": {
+    "dim": 2,
+    "linearity": "linear",
+    "expected_pf": "~1e-4",
+    "note": "frechet heavy tail"
+  }
+}

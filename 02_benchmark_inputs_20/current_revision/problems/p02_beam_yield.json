@@ -1,0 +1,43 @@
+{
+  "id": "p02_beam_yield",
+  "description": "Steel beam in bending. Yield stress Fy lognormal, section modulus Z normal, applied moment M follows a Gumbel extreme-value distribution. Failure: yield moment capacity exceeded by applied moment.",
+  "source": null,
+  "spec": {
+    "random_variables": [
+      {
+        "name": "Fy",
+        "distribution": "lognormal",
+        "mean": 350.0,
+        "std": 25.0,
+        "description": "yield strength (MPa)",
+        "extra_params": {}
+      },
+      {
+        "name": "Z",
+        "distribution": "normal",
+        "mean": 500.0,
+        "std": 10.0,
+        "description": "section modulus (cm^3)",
+        "extra_params": {}
+      },
+      {
+        "name": "M",
+        "distribution": "gumbel",
+        "mean": 120.0,
+        "std": 30.0,
+        "description": "applied moment (kN*m)",
+        "extra_params": {}
+      }
+    ],
+    "limit_state_expr": "Fy * Z / 1000.0 - M",
+    "correlation": {
+      "matrix": []
+    }
+  },
+  "meta": {
+    "dim": 3,
+    "linearity": "mild_nonlinear",
+    "expected_pf": "~1e-3",
+    "note": "mixed distributions"
+  }
+}

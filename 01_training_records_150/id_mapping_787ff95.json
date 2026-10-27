@@ -1,0 +1,1820 @@
+{
+ "description": "Derived mapping (not part of the native training file). Each native record in planner_gen_sft.jsonl (no ID field) is matched to a gen problem by exact canonical-JSON equality of the [spec] block in the user message vs problem['spec'] in training/gen/problems at commit 787ff95. Records are NOT modified.",
+ "method": {
+  "source_repo": "yonsei(idrgt7920):/home/jaehwanjeon/projects/reliability-LLM",
+  "git_ref": "787ff95 (git archive, read-only, training/gen/problems + training/gen/labels)",
+  "match_rule": "json.dumps(sort_keys=True, separators=(',',':')) equality; unique match required",
+  "caveat": "Current HEAD gen/problems differs for g069, g085, g126 (0c5c95e, 2026-07-10, after training); rebuilding from HEAD does not reproduce the native file."
+ },
+ "summary": {
+  "records": 150,
+  "problems_at_787ff95": 150,
+  "labels_at_787ff95": 150,
+  "exact_unique_matches": 150,
+  "unmatched": [],
+  "distinct_ids_matched": 150,
+  "target_label_mismatches": 0
+ },
+ "rows": [
+  {
+   "record_index_0based": 0,
+   "line_number_1based": 1,
+   "gen_problem_id_at_787ff95": "g001_steel_column_yield",
+   "id_prefix": "g001",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "26ee1ae66ccd62631b4e51769dde15e11397b486d0a89de4947c45d7d419abc9"
+  },
+  {
+   "record_index_0based": 1,
+   "line_number_1based": 2,
+   "gen_problem_id_at_787ff95": "g002_retaining_wall_sliding",
+   "id_prefix": "g002",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "a703c24c1e28d3e0dad993610620381852c31bcda28c63bc01f651075ef6335d"
+  },
+  {
+   "record_index_0based": 2,
+   "line_number_1based": 3,
+   "gen_problem_id_at_787ff95": "g003_pipe_hoop_stress",
+   "id_prefix": "g003",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "26aa0bb0bb948beea82300de5e285808a6d0fa88745e995ed6ac8045273cb6bd"
+  },
+  {
+   "record_index_0based": 3,
+   "line_number_1based": 4,
+   "gen_problem_id_at_787ff95": "g004_foundation_bearing",
+   "id_prefix": "g004",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "75c5e6c2789b6731a32a8f4171deeb40a9bdd4845633a48c9385055c8e92d88d"
+  },
+  {
+   "record_index_0based": 4,
+   "line_number_1based": 5,
+   "gen_problem_id_at_787ff95": "g005_truss_tie_lrfd",
+   "id_prefix": "g005",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "ac05e5f6ef7e03237b98fb6f29178a02f30cd5ab3eb0db6ca0e3007fe616ec90"
+  },
+  {
+   "record_index_0based": 5,
+   "line_number_1based": 6,
+   "gen_problem_id_at_787ff95": "g006_beamcolumn_interaction",
+   "id_prefix": "g006",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "2ed77654e899e9c2781f2155253bad11cdf479599ff8687cb355203aa2412e10"
+  },
+  {
+   "record_index_0based": 6,
+   "line_number_1based": 7,
+   "gen_problem_id_at_787ff95": "g007_resonance_amplification",
+   "id_prefix": "g007",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "5ca652a46d8db0d839ede202fd1bb3ef36cbaaf1889b67ecb4aa58c86b785790"
+  },
+  {
+   "record_index_0based": 7,
+   "line_number_1based": 8,
+   "gen_problem_id_at_787ff95": "g008_fatigue_miner",
+   "id_prefix": "g008",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "147d837006da4934317d4ce495d156814d9c7c5b68814d26840b204f14315326"
+  },
+  {
+   "record_index_0based": 8,
+   "line_number_1based": 9,
+   "gen_problem_id_at_787ff95": "g009_cable_sag_tension",
+   "id_prefix": "g009",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "8da9359300d0a222161cbab605e05966ddef6c32b417f1c47d910dbe26c8054b"
+  },
+  {
+   "record_index_0based": 9,
+   "line_number_1based": 10,
+   "gen_problem_id_at_787ff95": "g010_two_mode_buckling",
+   "id_prefix": "g010",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "76a4a78330e9724592f299b987a180564b56401c44dc587ac24a119fe0a5b52b"
+  },
+  {
+   "record_index_0based": 10,
+   "line_number_1based": 11,
+   "gen_problem_id_at_787ff95": "g011_containment_overpressure",
+   "id_prefix": "g011",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "93ee53b7037359fb00ae9fb887e0b9ab4cb3a98de247d406ebc4c632b331db56"
+  },
+  {
+   "record_index_0based": 11,
+   "line_number_1based": 12,
+   "gen_problem_id_at_787ff95": "g012_dam_overtopping",
+   "id_prefix": "g012",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "d5598a30ede945941c2111d37ea2d34de0b383cf55c0aa52aa7eb7e0a4121061"
+  },
+  {
+   "record_index_0based": 12,
+   "line_number_1based": 13,
+   "gen_problem_id_at_787ff95": "g013_bolt_group_shear",
+   "id_prefix": "g013",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "5b185f25787fa31806778226ec2e0003f88c884879aa136e60b8e2170b284451"
+  },
+  {
+   "record_index_0based": 13,
+   "line_number_1based": 14,
+   "gen_problem_id_at_787ff95": "g014_fillet_weld_shear",
+   "id_prefix": "g014",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "37a92744f84e45e5de1bae775d090f7b534708aac7e675c25f069ae292e9a824"
+  },
+  {
+   "record_index_0based": 14,
+   "line_number_1based": 15,
+   "gen_problem_id_at_787ff95": "g015_rc_column_axial",
+   "id_prefix": "g015",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "eb143947159eb744043b5c6dd4ee6e8334b686b90c839aada5cbd170dd2c0456"
+  },
+  {
+   "record_index_0based": 15,
+   "line_number_1based": 16,
+   "gen_problem_id_at_787ff95": "g016_glulam_beam_bending",
+   "id_prefix": "g016",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "4d0186ded7004f4a805e73abb4b6c10f9d6f82bdd19f88797fc8b6246d8d6608"
+  },
+  {
+   "record_index_0based": 16,
+   "line_number_1based": 17,
+   "gen_problem_id_at_787ff95": "g017_masonry_wall_compression",
+   "id_prefix": "g017",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "c5389fa6aaa889cfb9e35262eca75cac10db5339ca4771b93d8b33bc1a2c8f43"
+  },
+  {
+   "record_index_0based": 17,
+   "line_number_1based": 18,
+   "gen_problem_id_at_787ff95": "g018_pile_axial_capacity",
+   "id_prefix": "g018",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "bf910b25846e3df39e8dc915851210847f7b5db01de3e0a58cc7417c1f87210d"
+  },
+  {
+   "record_index_0based": 18,
+   "line_number_1based": 19,
+   "gen_problem_id_at_787ff95": "g019_anchor_bolt_tension",
+   "id_prefix": "g019",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "f95de7d2cddca6d973ecfd5f3f4b194cc882e3beebbe991a5b37d33ba572450c"
+  },
+  {
+   "record_index_0based": 19,
+   "line_number_1based": 20,
+   "gen_problem_id_at_787ff95": "g020_crane_girder_bending",
+   "id_prefix": "g020",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "e8d7e89f3e87b0cf40934e8aebd31362644951308a5d2ce6fe2cd45a1e291fe3"
+  },
+  {
+   "record_index_0based": 20,
+   "line_number_1based": 21,
+   "gen_problem_id_at_787ff95": "g021_shearwall_sliding",
+   "id_prefix": "g021",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "480adf869a42817bd1074aaed1354e3626793d83acac308449a954b6d7d2cf4b"
+  },
+  {
+   "record_index_0based": 21,
+   "line_number_1based": 22,
+   "gen_problem_id_at_787ff95": "g022_purlin_flexure",
+   "id_prefix": "g022",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "3356161b909aaf8c2769fdcdbef965481dccdb534d6a9f0df2fd03335d7d9151"
+  },
+  {
+   "record_index_0based": 22,
+   "line_number_1based": 23,
+   "gen_problem_id_at_787ff95": "g023_offshore_jacket_baseshear",
+   "id_prefix": "g023",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "15c043eed051a6c1384de04113f8e2751369bafc4bcf139c0e9f57099cc026a8"
+  },
+  {
+   "record_index_0based": 23,
+   "line_number_1based": 24,
+   "gen_problem_id_at_787ff95": "g024_mooring_line_extreme",
+   "id_prefix": "g024",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "c39cd3b90cb42fea91aff72fc8fe186835e907c0b5266367339a4fde50a6d5ac"
+  },
+  {
+   "record_index_0based": 24,
+   "line_number_1based": 25,
+   "gen_problem_id_at_787ff95": "g025_transmission_tower_members",
+   "id_prefix": "g025",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "66eaa2286e3238962316bd3ea0a4a49a79a2f6f3f45be040778379946ca1ae21"
+  },
+  {
+   "record_index_0based": 25,
+   "line_number_1based": 26,
+   "gen_problem_id_at_787ff95": "g026_brittle_fracture",
+   "id_prefix": "g026",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "313b0f69a4b7d06223b081806f078a177d2596fe21b8a699ac1d3c359268b48a"
+  },
+  {
+   "record_index_0based": 26,
+   "line_number_1based": 27,
+   "gen_problem_id_at_787ff95": "g027_seismic_drift_collapse",
+   "id_prefix": "g027",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "5ec6efc7a1e8fb39550192e5500af358397346e58ab9bac6390b0dbbd617bb7a"
+  },
+  {
+   "record_index_0based": 27,
+   "line_number_1based": 28,
+   "gen_problem_id_at_787ff95": "g028_lng_tank_buckling",
+   "id_prefix": "g028",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "7eb3130ba859885b8329e4958f0a2f8f67834362edefff191349758251257e41"
+  },
+  {
+   "record_index_0based": 28,
+   "line_number_1based": 29,
+   "gen_problem_id_at_787ff95": "g029_von_mises_yield",
+   "id_prefix": "g029",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "00d12b855110a6a4580de08381ef0f4d55288f05d3942e22d0c7d9d87dadac8d"
+  },
+  {
+   "record_index_0based": 29,
+   "line_number_1based": 30,
+   "gen_problem_id_at_787ff95": "g030_thermal_expansion_gap",
+   "id_prefix": "g030",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "19eec0cfbd6f25eceb7397d2d8beebcbe5c39817b7dcc8be3e1ec56f28f7bb94"
+  },
+  {
+   "record_index_0based": 30,
+   "line_number_1based": 31,
+   "gen_problem_id_at_787ff95": "g031_portal_frame_collapse",
+   "id_prefix": "g031",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "875bcf6d3a968790a23b1c657c63ee0a6ed25d430781eac4bf0c2a59d3a114e2"
+  },
+  {
+   "record_index_0based": 31,
+   "line_number_1based": 32,
+   "gen_problem_id_at_787ff95": "g032_beam_flexure_shear",
+   "id_prefix": "g032",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "53b7740a8c6110e473168ea004cf01facb7164e332e9ce999f49ceaba972d9f8"
+  },
+  {
+   "record_index_0based": 32,
+   "line_number_1based": 33,
+   "gen_problem_id_at_787ff95": "g033_pdelta_amplification",
+   "id_prefix": "g033",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "5dad7cb0fcfdbe9d9ee07292f6a269f965d0c8b77755d4ac2d6280cec71e735c"
+  },
+  {
+   "record_index_0based": 33,
+   "line_number_1based": 34,
+   "gen_problem_id_at_787ff95": "g034_frequency_band_detune",
+   "id_prefix": "g034",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "49f875323f81942a7dc7fe80e4bbdfb22b5f5f5297ee8b96643137e4471758e9"
+  },
+  {
+   "record_index_0based": 34,
+   "line_number_1based": 35,
+   "gen_problem_id_at_787ff95": "g035_wind_blade_resultant",
+   "id_prefix": "g035",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "c6dadb4e9dae50d8ef0d060d6b57131bb6c931e2e9ed5db9a447a965f612067d"
+  },
+  {
+   "record_index_0based": 35,
+   "line_number_1based": 36,
+   "gen_problem_id_at_787ff95": "g036_eccentric_footing",
+   "id_prefix": "g036",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "bf163e88933485d2e6a9cccbccfdd4add13d0732ebdf0818058bbd32792b12e9"
+  },
+  {
+   "record_index_0based": 36,
+   "line_number_1based": 37,
+   "gen_problem_id_at_787ff95": "g037_shear_stud_connection",
+   "id_prefix": "g037",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "0b42ad51c63d9377f4cae989af3c509417ce2ce251855ea4afe28fcb6d7dbc24"
+  },
+  {
+   "record_index_0based": 37,
+   "line_number_1based": 38,
+   "gen_problem_id_at_787ff95": "g038_timber_tension_parallel",
+   "id_prefix": "g038",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "47993396a55cdf2369eb724af39f9eba9fc491ee9b7ca877116d63f5b7f8cbae"
+  },
+  {
+   "record_index_0based": 38,
+   "line_number_1based": 39,
+   "gen_problem_id_at_787ff95": "g039_bridge_bearing_reaction",
+   "id_prefix": "g039",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "cec7773ef0637e14422071d481d9634fb04e17a313266d9f99aedf9ee6fcc8b2"
+  },
+  {
+   "record_index_0based": 39,
+   "line_number_1based": 40,
+   "gen_problem_id_at_787ff95": "g040_pressure_vessel_burst",
+   "id_prefix": "g040",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "faa00b55f1a0c435292b0650c3821ce2ceadb754b22bdeae4829c95b46c34f0c"
+  },
+  {
+   "record_index_0based": 40,
+   "line_number_1based": 41,
+   "gen_problem_id_at_787ff95": "g041_redundant_truss_highdim",
+   "id_prefix": "g041",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "3f6cd513631fb50bc67eb4fc8ee5708093f6b07b9053743bc5d129dee0b917bf"
+  },
+  {
+   "record_index_0based": 41,
+   "line_number_1based": 42,
+   "gen_problem_id_at_787ff95": "g042_wind_turbine_gust",
+   "id_prefix": "g042",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "7e9bac002104b6df790a692595641390b46f8f0a0bcf34af10280f93a833eee6"
+  },
+  {
+   "record_index_0based": 42,
+   "line_number_1based": 43,
+   "gen_problem_id_at_787ff95": "g043_roof_ponding",
+   "id_prefix": "g043",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "423f4cb29ceb6769dd891ade17f87a5cb9a33e617039fa1b88ccb88df048f62a"
+  },
+  {
+   "record_index_0based": 43,
+   "line_number_1based": 44,
+   "gen_problem_id_at_787ff95": "g044_precast_camber_band",
+   "id_prefix": "g044",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "4e9ae5abc4db0990e4f366d1db05dfa5f99b040f67aa533d4d0895628f1bf15c"
+  },
+  {
+   "record_index_0based": 44,
+   "line_number_1based": 45,
+   "gen_problem_id_at_787ff95": "g045_weakest_link_chain",
+   "id_prefix": "g045",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "7aff64463e0eae714b6c60f743f98dbd7d56276e4cbcc748ed0635930032556c"
+  },
+  {
+   "record_index_0based": 45,
+   "line_number_1based": 46,
+   "gen_problem_id_at_787ff95": "g046_pm_amplified_interaction",
+   "id_prefix": "g046",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "f2d7a44ee7c06271ea47e2baef56734e9f51c36391639ad20392b6fbdbc21161"
+  },
+  {
+   "record_index_0based": 46,
+   "line_number_1based": 47,
+   "gen_problem_id_at_787ff95": "g047_pontoon_draft_band",
+   "id_prefix": "g047",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "704c71bacc19bd19efb39935d5cad77c5d5260febcd82b52838fb08c933a1204"
+  },
+  {
+   "record_index_0based": 47,
+   "line_number_1based": 48,
+   "gen_problem_id_at_787ff95": "g048_biaxial_column_moment",
+   "id_prefix": "g048",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "f96eb54fb4446448e4fdbb5a837e400942e9846a016772d4543561be6bba7cc9"
+  },
+  {
+   "record_index_0based": 48,
+   "line_number_1based": 49,
+   "gen_problem_id_at_787ff95": "g049_slab_punching_flexure",
+   "id_prefix": "g049",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "25b238dc9b981b5be2f6bee7d2b925f0e07ecbb7471cc160244cd567ab751c54"
+  },
+  {
+   "record_index_0based": 49,
+   "line_number_1based": 50,
+   "gen_problem_id_at_787ff95": "g050_compaction_density",
+   "id_prefix": "g050",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "7f30a6b5c4d2f879768e4fb1f14c1c94f900cfb587b6dd0b593f3a7c15234565"
+  },
+  {
+   "record_index_0based": 50,
+   "line_number_1based": 51,
+   "gen_problem_id_at_787ff95": "g051_wave_runup_overtopping",
+   "id_prefix": "g051",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "70e5b7202af67fa754db2dea0f1f2c84a8ac3daf2c6be4959e5ea40b8f8a269e"
+  },
+  {
+   "record_index_0based": 51,
+   "line_number_1based": 52,
+   "gen_problem_id_at_787ff95": "g052_gusset_plate_yield",
+   "id_prefix": "g052",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "6162d9e3c0b95a126010d18fe14009f20cc579b90055bd217aee616acd9ecb00"
+  },
+  {
+   "record_index_0based": 52,
+   "line_number_1based": 53,
+   "gen_problem_id_at_787ff95": "g053_rc_beam_flexure",
+   "id_prefix": "g053",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "1e0d845d3cd36006fdfb8aa3b22f75de1f5e7b852f09ae95418164dc3dc695ec"
+  },
+  {
+   "record_index_0based": 53,
+   "line_number_1based": 54,
+   "gen_problem_id_at_787ff95": "g054_base_plate_bearing",
+   "id_prefix": "g054",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "8e4d034cda21adf4e00daeb075e833222aba65837d3aa22794e82a554ff8518f"
+  },
+  {
+   "record_index_0based": 54,
+   "line_number_1based": 55,
+   "gen_problem_id_at_787ff95": "g055_diaphragm_shear",
+   "id_prefix": "g055",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "dbe280f2bc2517c548f22414e322b64dd6f1664f4b81c5018b5ce7045b90d29a"
+  },
+  {
+   "record_index_0based": 55,
+   "line_number_1based": 56,
+   "gen_problem_id_at_787ff95": "g056_oneway_slab_flexure",
+   "id_prefix": "g056",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "972e20d1706c701aa5636c034b5ed0b4a98dd838b0c75ee26522470c5de54d09"
+  },
+  {
+   "record_index_0based": 56,
+   "line_number_1based": 57,
+   "gen_problem_id_at_787ff95": "g057_wind_girt_bending",
+   "id_prefix": "g057",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "21f084de28fb2730e353c00d280e04bd4e457052b7dd521736a7075ac3200505"
+  },
+  {
+   "record_index_0based": 57,
+   "line_number_1based": 58,
+   "gen_problem_id_at_787ff95": "g058_aircraft_spar_strength",
+   "id_prefix": "g058",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "5cb3060b3bceb8ea9de8e04d1a61be9065b9246c305362d0b716f57a9952a60c"
+  },
+  {
+   "record_index_0based": 58,
+   "line_number_1based": 59,
+   "gen_problem_id_at_787ff95": "g059_subsea_pipe_burst",
+   "id_prefix": "g059",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "4fc80541fe639e08091851a17c56698be930bbd83c2d3a491ace7d1a28d846e9"
+  },
+  {
+   "record_index_0based": 59,
+   "line_number_1based": 60,
+   "gen_problem_id_at_787ff95": "g060_stay_cable_fatigue",
+   "id_prefix": "g060",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "539abb64373d9a1aba8b01e4c8d29ee2f8357eea99fad19dce9c34dfa2beecb6"
+  },
+  {
+   "record_index_0based": 60,
+   "line_number_1based": 61,
+   "gen_problem_id_at_787ff95": "g061_nuclear_pipe_rupture",
+   "id_prefix": "g061",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "5aaf4051ef82caf88b27c530f29224031f814ad9f7a3d0766bcaf59598cb59c6"
+  },
+  {
+   "record_index_0based": 61,
+   "line_number_1based": 62,
+   "gen_problem_id_at_787ff95": "g062_highdim_25rv_parallel",
+   "id_prefix": "g062",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "24765e3de092c13c1a7c52759f949bdcd0a360404fc1d195a0561712b2dc2da0"
+  },
+  {
+   "record_index_0based": 62,
+   "line_number_1based": 63,
+   "gen_problem_id_at_787ff95": "g063_bridge_flutter",
+   "id_prefix": "g063",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "734d9fae18fbacfb33040e645cf5a02376441fdea9a07a481cbfe0fce791fdbd"
+  },
+  {
+   "record_index_0based": 63,
+   "line_number_1based": 64,
+   "gen_problem_id_at_787ff95": "g064_levee_overtopping",
+   "id_prefix": "g064",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "10fcc5cab27450fe139eeac92f7d7ea6f7ce21637f146fffcd380411d6d826e8"
+  },
+  {
+   "record_index_0based": 64,
+   "line_number_1based": 65,
+   "gen_problem_id_at_787ff95": "g065_ship_hull_ultimate",
+   "id_prefix": "g065",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "02592eb1255ddb64afab7a7151e5c8aa57471bf0303aab68bfdfa952f18532ab"
+  },
+  {
+   "record_index_0based": 65,
+   "line_number_1based": 66,
+   "gen_problem_id_at_787ff95": "g066_rockfall_barrier",
+   "id_prefix": "g066",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "17e3b1410bde15c5e056402ee06d9db90016e3ab70a83e5fcc3c841c91a364a3"
+  },
+  {
+   "record_index_0based": 66,
+   "line_number_1based": 67,
+   "gen_problem_id_at_787ff95": "g067_bushing_dielectric",
+   "id_prefix": "g067",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "fec9b2eea1ce1c3ffa1565fcce7c7ae32435241aa66d29932283f506ff3d3468"
+  },
+  {
+   "record_index_0based": 67,
+   "line_number_1based": 68,
+   "gen_problem_id_at_787ff95": "g068_deck_airgap",
+   "id_prefix": "g068",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "d5c8ca5605191a0e01646a31fcbff032f0abea08c61bcb63d47d56bd94e312ab"
+  },
+  {
+   "record_index_0based": 68,
+   "line_number_1based": 69,
+   "gen_problem_id_at_787ff95": "g069_beta_bounded_strength",
+   "id_prefix": "g069",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "497cfdbd08c2819154cd6f70e0a8ad22677e133d67171eb25878893f8d1eb746"
+  },
+  {
+   "record_index_0based": 69,
+   "line_number_1based": 70,
+   "gen_problem_id_at_787ff95": "g070_ceramic_weakest",
+   "id_prefix": "g070",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "b4952982b303def5e704c16c03716b2705f49577f052dd86d3f92e1b1ab0e526"
+  },
+  {
+   "record_index_0based": 70,
+   "line_number_1based": 71,
+   "gen_problem_id_at_787ff95": "g071_pile_group_highdim",
+   "id_prefix": "g071",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "7800eddce0d5d1a5de8f388afd98cd8e13163a2dbf327c4c65e2c07489d9ace3"
+  },
+  {
+   "record_index_0based": 71,
+   "line_number_1based": 72,
+   "gen_problem_id_at_787ff95": "g072_satellite_launch_load",
+   "id_prefix": "g072",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "e5e72f21e06ad22184384fa5177a666e3d9e88b8418fb50d02aa741cd10e02ee"
+  },
+  {
+   "record_index_0based": 72,
+   "line_number_1based": 73,
+   "gen_problem_id_at_787ff95": "g073_shear_key",
+   "id_prefix": "g073",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "1a18750f063567fabb7caa82722a88bc16c13b7431a9b33e87ec03940d36f703"
+  },
+  {
+   "record_index_0based": 73,
+   "line_number_1based": 74,
+   "gen_problem_id_at_787ff95": "g074_corbel_bearing",
+   "id_prefix": "g074",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "9f38a0ef7b4341ae4cca21251c93ab30fdc663ed5168bf1785d3d039a69b25ae"
+  },
+  {
+   "record_index_0based": 74,
+   "line_number_1based": 75,
+   "gen_problem_id_at_787ff95": "g075_hss_brace_compression",
+   "id_prefix": "g075",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "4dcc6c13409916d96fbf840a9122634991ee8fc170d60b25a0ff142be3c39b4a"
+  },
+  {
+   "record_index_0based": 75,
+   "line_number_1based": 76,
+   "gen_problem_id_at_787ff95": "g076_wood_shear_wall",
+   "id_prefix": "g076",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "fc616cbb8dbe1d5a06daedb387673a419346f55ff3896eb0eaa600a322f6e9a3"
+  },
+  {
+   "record_index_0based": 76,
+   "line_number_1based": 77,
+   "gen_problem_id_at_787ff95": "g077_steel_deck_capacity",
+   "id_prefix": "g077",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "ec661644124e0cf1c9e98343a90d85478e44b1f1d663c8123cf05d8d67d40633"
+  },
+  {
+   "record_index_0based": 77,
+   "line_number_1based": 78,
+   "gen_problem_id_at_787ff95": "g078_differential_settlement",
+   "id_prefix": "g078",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "fe6cdbc7f93f00cad7925d7dbd1bdaa7a97001ee7871758dd09f57751cced1f6"
+  },
+  {
+   "record_index_0based": 78,
+   "line_number_1based": 79,
+   "gen_problem_id_at_787ff95": "g079_shaft_critical_speed",
+   "id_prefix": "g079",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "1efedb1abc7a3a6cb92849cb6e4e200074f7fda6c234f2fb008613e207b1b4a9"
+  },
+  {
+   "record_index_0based": 79,
+   "line_number_1based": 80,
+   "gen_problem_id_at_787ff95": "g080_wall_sliding_overturning",
+   "id_prefix": "g080",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "bcd6858d2dc5066f7f855237561db758a5b31f3b0e45a30cc8077da24481551c"
+  },
+  {
+   "record_index_0based": 80,
+   "line_number_1based": 81,
+   "gen_problem_id_at_787ff95": "g081_concrete_wc_strength",
+   "id_prefix": "g081",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "280436a5ab57a664703a61243ab3b5e7ead6c7beeac13396000df7129998595f"
+  },
+  {
+   "record_index_0based": 81,
+   "line_number_1based": 82,
+   "gen_problem_id_at_787ff95": "g082_wind_seismic_resultant",
+   "id_prefix": "g082",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "2323cbc16b0a13493dce3f62ed45c9c00f46e92a1d59f9a0f4cdb5539bbbd711"
+  },
+  {
+   "record_index_0based": 82,
+   "line_number_1based": 83,
+   "gen_problem_id_at_787ff95": "g083_lug_tension",
+   "id_prefix": "g083",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "ade097b623fe16ff8b237a3dd12e1192d5702c1fd21d822b89f52482bd5428dd"
+  },
+  {
+   "record_index_0based": 83,
+   "line_number_1based": 84,
+   "gen_problem_id_at_787ff95": "g084_shaft_torsion",
+   "id_prefix": "g084",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "c387c614e87671bff38845d11f4991ba0a2f6fd0946965848d337f331795a386"
+  },
+  {
+   "record_index_0based": 84,
+   "line_number_1based": 85,
+   "gen_problem_id_at_787ff95": "g085_bearing_pad_compression",
+   "id_prefix": "g085",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "e3e6a2141e9870b49a9234868937c9f7b99bceb66473d761d22cad829d04ea74"
+  },
+  {
+   "record_index_0based": 85,
+   "line_number_1based": 86,
+   "gen_problem_id_at_787ff95": "g086_soil_nail_pullout",
+   "id_prefix": "g086",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "510b9093779110e627c764b2b4d034d3f2bff3de6098a0a6705728c4eaa685b0"
+  },
+  {
+   "record_index_0based": 86,
+   "line_number_1based": 87,
+   "gen_problem_id_at_787ff95": "g087_curtain_wall_mullion",
+   "id_prefix": "g087",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "da71ba0e6c0e4bf844c9920dac70e92829fa2ac968b6d738428827b9213a1391"
+  },
+  {
+   "record_index_0based": 87,
+   "line_number_1based": 88,
+   "gen_problem_id_at_787ff95": "g088_grandstand_beam",
+   "id_prefix": "g088",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "84d3a457745de99c888d2042bc06b3283ba8508929b74aa151f3ad5919aee17f"
+  },
+  {
+   "record_index_0based": 88,
+   "line_number_1based": 89,
+   "gen_problem_id_at_787ff95": "g089_silo_wall_hoop",
+   "id_prefix": "g089",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "efa480e41d4b5c3aef4447d8d7fc7b37b2c9f91ace333fb3a53225ac0a0e3f91"
+  },
+  {
+   "record_index_0based": 89,
+   "line_number_1based": 90,
+   "gen_problem_id_at_787ff95": "g090_elevator_rope",
+   "id_prefix": "g090",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "5b496cb8726696b2ab807ac80962743d86a66132dfe06865c8401f3a0d72ddc0"
+  },
+  {
+   "record_index_0based": 90,
+   "line_number_1based": 91,
+   "gen_problem_id_at_787ff95": "g091_scaffold_standard",
+   "id_prefix": "g091",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "0eb6cd6468a825ab764e4858d66bc86efb065a819ae5af20fde1aa63d97d583e"
+  },
+  {
+   "record_index_0based": 91,
+   "line_number_1based": 92,
+   "gen_problem_id_at_787ff95": "g092_chimney_liner",
+   "id_prefix": "g092",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "e060b892315b452f5908d7f25c66d8174ee81a953bd72fb423b39270d22dee37"
+  },
+  {
+   "record_index_0based": 92,
+   "line_number_1based": 93,
+   "gen_problem_id_at_787ff95": "g093_culvert_crown",
+   "id_prefix": "g093",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "2af59a71f06fb40e0ddebaa98522cf688a18651b44d2692134a8976ffaa82c90"
+  },
+  {
+   "record_index_0based": 93,
+   "line_number_1based": 94,
+   "gen_problem_id_at_787ff95": "g094_arch_thrust_line",
+   "id_prefix": "g094",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "cdcbed67ff3266b6dac000d6d72d1a3686c635806420e9f6eab0704df7d57072"
+  },
+  {
+   "record_index_0based": 94,
+   "line_number_1based": 95,
+   "gen_problem_id_at_787ff95": "g095_shell_buckling_amplification",
+   "id_prefix": "g095",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "39fac13ead8f3d3b5897d732a2d58f59d1062ffa35e443e6f14f7bb66d0c884f"
+  },
+  {
+   "record_index_0based": 95,
+   "line_number_1based": 96,
+   "gen_problem_id_at_787ff95": "g096_anchor_three_modes",
+   "id_prefix": "g096",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "549fe1ec5893307a4c9b57a9f71e4e196786577b60d02c19d6b89124a797f932"
+  },
+  {
+   "record_index_0based": 96,
+   "line_number_1based": 97,
+   "gen_problem_id_at_787ff95": "g097_brace_euler_yield_min",
+   "id_prefix": "g097",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "f13d9c05ff1720af098a95dbefae88b54aebfd1e42921ceb28880708243e41b2"
+  },
+  {
+   "record_index_0based": 97,
+   "line_number_1based": 98,
+   "gen_problem_id_at_787ff95": "g098_gear_mesh_resonance",
+   "id_prefix": "g098",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "5591a932db5ec1c045a2b82ce3b5c5fcc32ab43e90b1e3e85c6b5240beecb6b9"
+  },
+  {
+   "record_index_0based": 98,
+   "line_number_1based": 99,
+   "gen_problem_id_at_787ff95": "g099_mooring_lines_min",
+   "id_prefix": "g099",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "059e80f7301a531a63a14c593989a9a19189b1fd5f5d5d1afd430c6c5b7143b8"
+  },
+  {
+   "record_index_0based": 99,
+   "line_number_1based": 100,
+   "gen_problem_id_at_787ff95": "g100_floor_vibration_resonance",
+   "id_prefix": "g100",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "303496c36c53af2cf392b2fa8486d9b2acb7b45af642543453fb77837a112f5a"
+  },
+  {
+   "record_index_0based": 100,
+   "line_number_1based": 101,
+   "gen_problem_id_at_787ff95": "g101_pier_settlement_tilt",
+   "id_prefix": "g101",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "666cbf5600033431e4aa63a94a065f9bb91b85b94e34ce13147bd8ccd8ee1ec2"
+  },
+  {
+   "record_index_0based": 101,
+   "line_number_1based": 102,
+   "gen_problem_id_at_787ff95": "g102_bearing_rotation",
+   "id_prefix": "g102",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "a1b0f08058a72c336755f57f958c74759413ddc95fba5edb44be6736df3ee378"
+  },
+  {
+   "record_index_0based": 102,
+   "line_number_1based": 103,
+   "gen_problem_id_at_787ff95": "g103_machine_alignment",
+   "id_prefix": "g103",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "bfe71f1b85b3fab7510f9e96f5aabcbe10691854c6b4b3e1556548905954c605"
+  },
+  {
+   "record_index_0based": 103,
+   "line_number_1based": 104,
+   "gen_problem_id_at_787ff95": "g104_pipe_burst_collapse_min",
+   "id_prefix": "g104",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "1c8a7254dbb612bf5e627c0d9ed0ccd4212f09f542eb933662661260836e6b81"
+  },
+  {
+   "record_index_0based": 104,
+   "line_number_1based": 105,
+   "gen_problem_id_at_787ff95": "g105_truss_member_min",
+   "id_prefix": "g105",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "a2e834f2ec980f1f700f498b2e31d4568875d88fcd9b17f20d5737b6b6cfaf80"
+  },
+  {
+   "record_index_0based": 105,
+   "line_number_1based": 106,
+   "gen_problem_id_at_787ff95": "g106_chimney_vortex_lockin",
+   "id_prefix": "g106",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "1c8ed3716b657b8e079c056d394c7d2d1c5d579e357ed4804cded01992e1ad3e"
+  },
+  {
+   "record_index_0based": 106,
+   "line_number_1based": 107,
+   "gen_problem_id_at_787ff95": "g107_base_isolation_displacement",
+   "id_prefix": "g107",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "2a2b1f3b9ef7a6254d442258b1845a3fc425726e84b0071ad466037979a807d5"
+  },
+  {
+   "record_index_0based": 107,
+   "line_number_1based": 108,
+   "gen_problem_id_at_787ff95": "g108_blast_resistant_wall",
+   "id_prefix": "g108",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "a2851d2fcd99fa12e247b442776b34cec47f945b17212335063a87ce22752b81"
+  },
+  {
+   "record_index_0based": 108,
+   "line_number_1based": 109,
+   "gen_problem_id_at_787ff95": "g109_offshore_riser",
+   "id_prefix": "g109",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "fe9f17cc4da749143c4a25dd05fcd6dc246cf57755141b94658e058e889d11b5"
+  },
+  {
+   "record_index_0based": 109,
+   "line_number_1based": 110,
+   "gen_problem_id_at_787ff95": "g110_crane_hook_overload",
+   "id_prefix": "g110",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "60553aa27247a72b5282e36a3f9703022760679a022fbc5d8fcd91fe2d83c34c"
+  },
+  {
+   "record_index_0based": 110,
+   "line_number_1based": 111,
+   "gen_problem_id_at_787ff95": "g111_turbine_blade_extreme",
+   "id_prefix": "g111",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "b22855eb418f86d79f3815a04095d3d593d1b499974e5e9f97140954413b4b99"
+  },
+  {
+   "record_index_0based": 111,
+   "line_number_1based": 112,
+   "gen_problem_id_at_787ff95": "g112_tunnel_lining_thrust",
+   "id_prefix": "g112",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "134b6d566e3405bd728a452e6751beb7e2ef5b55290bcb70f4225aa8fff83f40"
+  },
+  {
+   "record_index_0based": 112,
+   "line_number_1based": 113,
+   "gen_problem_id_at_787ff95": "g113_spillway_pmf",
+   "id_prefix": "g113",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "e4f8064c7c4c0c2758a923b2f68813e0d68755a4b570a3f2ed6a1b78d9ca0833"
+  },
+  {
+   "record_index_0based": 113,
+   "line_number_1based": 114,
+   "gen_problem_id_at_787ff95": "g114_lightning_spd",
+   "id_prefix": "g114",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "854084ac2bff07e70d35fa9fc298db7f6a30497806a08fe4fa24228c4e6ebb7e"
+  },
+  {
+   "record_index_0based": 114,
+   "line_number_1based": 115,
+   "gen_problem_id_at_787ff95": "g115_pipeline_thermal_buckle",
+   "id_prefix": "g115",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "97c843d5d67243dfe9f24f9552a4e7b701c1c0167a7d675fb97ee83a34e5f63d"
+  },
+  {
+   "record_index_0based": 115,
+   "line_number_1based": 116,
+   "gen_problem_id_at_787ff95": "g116_highdim_18rv",
+   "id_prefix": "g116",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "e1ca2733892d16bb01b81caaa12ae8d1bfe7147135d2dcb58d46ddcb4987c28a"
+  },
+  {
+   "record_index_0based": 116,
+   "line_number_1based": 117,
+   "gen_problem_id_at_787ff95": "g117_landing_gear",
+   "id_prefix": "g117",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "b638d4fb4e4159c9d5827300c9258936a9800b7ad6eabf9825ed23274ab969e6"
+  },
+  {
+   "record_index_0based": 117,
+   "line_number_1based": 118,
+   "gen_problem_id_at_787ff95": "g118_railway_axle_fatigue",
+   "id_prefix": "g118",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "2399e4991c236fb6a7bb14b1afa30a095b5551b2069f3d436715e66c3a21d3d8"
+  },
+  {
+   "record_index_0based": 118,
+   "line_number_1based": 119,
+   "gen_problem_id_at_787ff95": "g119_caisson_bearing",
+   "id_prefix": "g119",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "170e5b71e1164443640a3b66e63103bb6c48833e13e3ad8a6991b98c754b7f2e"
+  },
+  {
+   "record_index_0based": 119,
+   "line_number_1based": 120,
+   "gen_problem_id_at_787ff95": "g120_arch_bridge_buckling",
+   "id_prefix": "g120",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "0ae446cb0e1988d5665a7fed66e0c0239fa3b776dce3c82058e927ae957b2baf"
+  },
+  {
+   "record_index_0based": 120,
+   "line_number_1based": 121,
+   "gen_problem_id_at_787ff95": "g121_form_frechet_load",
+   "id_prefix": "g121",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "98c023226aeadb15df02a39aa6b3111c98b53808a8a27b9ccb822640967f9037"
+  },
+  {
+   "record_index_0based": 121,
+   "line_number_1based": 122,
+   "gen_problem_id_at_787ff95": "g122_form_weibull_strength",
+   "id_prefix": "g122",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "5b939df9855ca2ca9fae119df789496020dc140d44298bd3a288c21294a4f211"
+  },
+  {
+   "record_index_0based": 122,
+   "line_number_1based": 123,
+   "gen_problem_id_at_787ff95": "g123_form_correlated_gamma_loads",
+   "id_prefix": "g123",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "d88b23cba2050cce4ca1dc0688953b772af124073c6b8d1c9d51bc5f946e2adc"
+  },
+  {
+   "record_index_0based": 123,
+   "line_number_1based": 124,
+   "gen_problem_id_at_787ff95": "g124_form_rayleigh_load",
+   "id_prefix": "g124",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "8c3ae580ecaa5ecdda6d8395b9079b5408eec06bd00322356181ac154f827915"
+  },
+  {
+   "record_index_0based": 124,
+   "line_number_1based": 125,
+   "gen_problem_id_at_787ff95": "g125_form_uniform_exponential",
+   "id_prefix": "g125",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "2d300f99f7d3555900b073d42925f83d94f6d6a91cde330a10f4a30eb7839734"
+  },
+  {
+   "record_index_0based": 125,
+   "line_number_1based": 126,
+   "gen_problem_id_at_787ff95": "g126_mcs_weibull_min",
+   "id_prefix": "g126",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "86946edc7f762bf8f7c294569af0d69ee00cc94657c347c098ca0f83730c5ef9"
+  },
+  {
+   "record_index_0based": 126,
+   "line_number_1based": 127,
+   "gen_problem_id_at_787ff95": "g127_mcs_gamma_freq_band",
+   "id_prefix": "g127",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "f8a4a2b6e7300470526624cf6fb8a6a9f658a18035e8b2d7c53eba30ff727f05"
+  },
+  {
+   "record_index_0based": 127,
+   "line_number_1based": 128,
+   "gen_problem_id_at_787ff95": "g128_mcs_correlated_min",
+   "id_prefix": "g128",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "d6afd6acc831026e6efb210f3fb8f0a1804421a2e539050cbb30c5f8138aa65d"
+  },
+  {
+   "record_index_0based": 128,
+   "line_number_1based": 129,
+   "gen_problem_id_at_787ff95": "g129_mcs_gamma_von_mises",
+   "id_prefix": "g129",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "af4b5f5d1f2c70901141d2c198c17d556e1f4e8716da70fc640e0920586da19f"
+  },
+  {
+   "record_index_0based": 129,
+   "line_number_1based": 130,
+   "gen_problem_id_at_787ff95": "g130_mcs_correlated_band",
+   "id_prefix": "g130",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "05316c88331022ee32c1adc8b815dd74d81ada27949bce40e616def4debed09a"
+  },
+  {
+   "record_index_0based": 130,
+   "line_number_1based": 131,
+   "gen_problem_id_at_787ff95": "g131_adv_normal_deep",
+   "id_prefix": "g131",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "70e278ff550dc8d8bb19a866e02891712bdcbe6de9cf5db1778d363b82d6f0d5"
+  },
+  {
+   "record_index_0based": 131,
+   "line_number_1based": 132,
+   "gen_problem_id_at_787ff95": "g132_adv_rare_min",
+   "id_prefix": "g132",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "d30ebb30542a6116150b6b43f14c813aae52546929de8b5e8b76a8d40652d4d1"
+  },
+  {
+   "record_index_0based": 132,
+   "line_number_1based": 133,
+   "gen_problem_id_at_787ff95": "g133_adv_rare_bimodal",
+   "id_prefix": "g133",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "b8875787641c0ea911c3ac11d8a8f87bdb085ee0d3b85bfd3842410b92a66b2e"
+  },
+  {
+   "record_index_0based": 133,
+   "line_number_1based": 134,
+   "gen_problem_id_at_787ff95": "g134_adv_correlated_rare",
+   "id_prefix": "g134",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "c25918b563ebd5a310f3e8706ea17e483d05948a8e4542f4adf98cf79534edaa"
+  },
+  {
+   "record_index_0based": 134,
+   "line_number_1based": 135,
+   "gen_problem_id_at_787ff95": "g135_adv_lognormal_deep",
+   "id_prefix": "g135",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "a42cee1ce68dcb54210209746ddb982d30b5fe8cda9872f932fdf428ee2d7a20"
+  },
+  {
+   "record_index_0based": 135,
+   "line_number_1based": 136,
+   "gen_problem_id_at_787ff95": "g136_form_correlated_normal_loads",
+   "id_prefix": "g136",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "bd76c8b11314ed0cf86b8ea06a3825e80196df02313aa68595e86af6a8ca970f"
+  },
+  {
+   "record_index_0based": 136,
+   "line_number_1based": 137,
+   "gen_problem_id_at_787ff95": "g137_form_correlated_resistances",
+   "id_prefix": "g137",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "fd531be214f7a2798f2ea038b59859aff9f85000198ff24464d02f83d63bcbe0"
+  },
+  {
+   "record_index_0based": 137,
+   "line_number_1based": 138,
+   "gen_problem_id_at_787ff95": "g138_form_correlated_dead_live",
+   "id_prefix": "g138",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "7b6d0cf93af5aa1442b42063a54264433147863c3611e4c119a4ac04214b9da2"
+  },
+  {
+   "record_index_0based": 138,
+   "line_number_1based": 139,
+   "gen_problem_id_at_787ff95": "g139_form_correlated_strength_area",
+   "id_prefix": "g139",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "004920c531299ebb274d8f6b1a86050f27d0e0d36274a625f3edf3088e47e480"
+  },
+  {
+   "record_index_0based": 139,
+   "line_number_1based": 140,
+   "gen_problem_id_at_787ff95": "g140_form_correlated_three_loads",
+   "id_prefix": "g140",
+   "target_category": "FORM-based",
+   "label_ticked_at_787ff95": [
+    "FORM-based"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "d11425fdeec2a8d435634b49def036a00c3a334c6bdc7b6adb84261d048d43e8"
+  },
+  {
+   "record_index_0based": 140,
+   "line_number_1based": 141,
+   "gen_problem_id_at_787ff95": "g141_mcs_rayleigh_min",
+   "id_prefix": "g141",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "44b07507ef36720af42dd88fd880c6928837bc9b3b6e62f1f373dc8b107edfe2"
+  },
+  {
+   "record_index_0based": 141,
+   "line_number_1based": 142,
+   "gen_problem_id_at_787ff95": "g142_mcs_exponential_min",
+   "id_prefix": "g142",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "ea56e0779e9724c16e09d2a5e7b5c7f342682f351c4382a0b13ae9803384db08"
+  },
+  {
+   "record_index_0based": 142,
+   "line_number_1based": 143,
+   "gen_problem_id_at_787ff95": "g143_mcs_correlated_three_min",
+   "id_prefix": "g143",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "45c1b3b79055b509b15b7d71ac4ba0511aaabea053241f9699b7127ede27dc0c"
+  },
+  {
+   "record_index_0based": 143,
+   "line_number_1based": 144,
+   "gen_problem_id_at_787ff95": "g144_mcs_correlated_von_mises",
+   "id_prefix": "g144",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "12eb24791da88db230b5b54ed4407c1ce4c1fd516364e007c422b848f5ecde78"
+  },
+  {
+   "record_index_0based": 144,
+   "line_number_1based": 145,
+   "gen_problem_id_at_787ff95": "g145_mcs_correlated_tilt",
+   "id_prefix": "g145",
+   "target_category": "MCS",
+   "label_ticked_at_787ff95": [
+    "MCS"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "97acd28630b63c83fd7d129a1fda2259cd003bc523d907937b1d5cb68a022cd4"
+  },
+  {
+   "record_index_0based": 145,
+   "line_number_1based": 146,
+   "gen_problem_id_at_787ff95": "g146_adv_rayleigh_rare",
+   "id_prefix": "g146",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "6130d1c75e2061b97d2f6c5e34b49419ed3f3f703b74f3a1d9b661d576f305b4"
+  },
+  {
+   "record_index_0based": 146,
+   "line_number_1based": 147,
+   "gen_problem_id_at_787ff95": "g147_adv_exponential_rare",
+   "id_prefix": "g147",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "f13bfb028428fbb99d2f977abc5a8d310a6f2083e955364b9ac828afe67701fd"
+  },
+  {
+   "record_index_0based": 147,
+   "line_number_1based": 148,
+   "gen_problem_id_at_787ff95": "g148_adv_correlated_three_rare",
+   "id_prefix": "g148",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "14b4e5cc46d43051644278fc82b9802b97825f394cf940198c43125233cc0352"
+  },
+  {
+   "record_index_0based": 148,
+   "line_number_1based": 149,
+   "gen_problem_id_at_787ff95": "g149_adv_correlated_loads_rare",
+   "id_prefix": "g149",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "99143144de14703ee14308bba69d4542699b5f9fc8b9df31b55b57d530021800"
+  },
+  {
+   "record_index_0based": 149,
+   "line_number_1based": 150,
+   "gen_problem_id_at_787ff95": "g150_adv_anticorrelated_deep",
+   "id_prefix": "g150",
+   "target_category": "Advanced",
+   "label_ticked_at_787ff95": [
+    "Advanced"
+   ],
+   "target_matches_label": true,
+   "user_message_sha256": "0dc955fd135afef154e9f91d863c0d485760860e362ea6bf0b532119c6d41839"
+  }
+ ]
+}

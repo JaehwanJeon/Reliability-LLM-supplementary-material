@@ -1,0 +1,35 @@
+{
+  "id": "p20_exponential_degradation",
+  "description": "Corrosion-induced strength degradation modelled with an exponentially distributed lifetime. Inspection threshold is lognormal.",
+  "source": null,
+  "spec": {
+    "random_variables": [
+      {
+        "name": "T",
+        "distribution": "exponential",
+        "mean": 50.0,
+        "std": 50.0,
+        "description": "lifetime (years)",
+        "extra_params": {}
+      },
+      {
+        "name": "Tins",
+        "distribution": "lognormal",
+        "mean": 1.0,
+        "std": 0.2,
+        "description": "inspection age (years)",
+        "extra_params": {}
+      }
+    ],
+    "limit_state_expr": "T - Tins",
+    "correlation": {
+      "matrix": []
+    }
+  },
+  "meta": {
+    "dim": 2,
+    "linearity": "linear",
+    "expected_pf": "~2e-2",
+    "note": "exponential distribution"
+  }
+}

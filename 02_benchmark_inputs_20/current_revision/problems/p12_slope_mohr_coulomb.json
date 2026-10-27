@@ -1,0 +1,43 @@
+{
+  "id": "p12_slope_mohr_coulomb",
+  "description": "Slope stability with friction angle phi (normal) and cohesion c (lognormal). Driving stress sigma Gumbel. Mohr-Coulomb wedge failure surface with phi-dependent geometric correction (sqrt curvature) that breaks FORM linearization.",
+  "source": null,
+  "spec": {
+    "random_variables": [
+      {
+        "name": "phi",
+        "distribution": "normal",
+        "mean": 32.0,
+        "std": 3.0,
+        "description": "friction angle (deg)",
+        "extra_params": {}
+      },
+      {
+        "name": "c",
+        "distribution": "lognormal",
+        "mean": 22.0,
+        "std": 4.0,
+        "description": "cohesion (kPa)",
+        "extra_params": {}
+      },
+      {
+        "name": "sigma",
+        "distribution": "gumbel",
+        "mean": 22.0,
+        "std": 5.0,
+        "description": "driving normal stress (kPa)",
+        "extra_params": {}
+      }
+    ],
+    "limit_state_expr": "c * np.cos(phi * 3.14159265 / 180.0) + sigma * np.tan(phi * 3.14159265 / 180.0) * np.sqrt(1.0 + 0.05 * (phi - 32.0)**2) - sigma",
+    "correlation": {
+      "matrix": []
+    }
+  },
+  "meta": {
+    "dim": 3,
+    "linearity": "strong_nonlinear",
+    "expected_pf": "~5e-3",
+    "note": "Mohr-Coulomb + phi-curvature sqrt-term (FORM breaker)"
+  }
+}

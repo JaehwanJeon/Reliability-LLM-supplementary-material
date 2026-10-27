@@ -1,0 +1,35 @@
+{
+  "id": "p15_rayleigh_wave_overtopping",
+  "description": "Sea-wall overtopping. Significant wave height follows Rayleigh; deck elevation is normal.",
+  "source": null,
+  "spec": {
+    "random_variables": [
+      {
+        "name": "H",
+        "distribution": "rayleigh",
+        "mean": 2.5,
+        "std": 1.31,
+        "description": "wave height (m)",
+        "extra_params": {}
+      },
+      {
+        "name": "D",
+        "distribution": "normal",
+        "mean": 7.0,
+        "std": 0.3,
+        "description": "deck elevation (m)",
+        "extra_params": {}
+      }
+    ],
+    "limit_state_expr": "D - 1.2 * H",
+    "correlation": {
+      "matrix": []
+    }
+  },
+  "meta": {
+    "dim": 2,
+    "linearity": "linear",
+    "expected_pf": "~6e-3",
+    "note": "rayleigh"
+  }
+}

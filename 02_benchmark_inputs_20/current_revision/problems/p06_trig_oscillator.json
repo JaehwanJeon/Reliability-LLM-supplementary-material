@@ -1,0 +1,35 @@
+{
+  "id": "p06_trig_oscillator",
+  "description": "Highly nonlinear response where a product involving sin causes a curved failure surface. FORM tends to underestimate Pf here.",
+  "source": null,
+  "spec": {
+    "random_variables": [
+      {
+        "name": "X1",
+        "distribution": "normal",
+        "mean": 1.5,
+        "std": 0.3,
+        "description": "phase variable",
+        "extra_params": {}
+      },
+      {
+        "name": "X2",
+        "distribution": "normal",
+        "mean": 2.0,
+        "std": 0.4,
+        "description": "amplitude",
+        "extra_params": {}
+      }
+    ],
+    "limit_state_expr": "np.sin(X1) * X2 - 0.5",
+    "correlation": {
+      "matrix": []
+    }
+  },
+  "meta": {
+    "dim": 2,
+    "linearity": "strong_nonlinear",
+    "expected_pf": "~5e-2",
+    "note": "sin produces multimodal failure"
+  }
+}

@@ -1,0 +1,259 @@
+{
+ "id": "p17_highdim_30rv_parallel",
+ "description": "Parallel redundant system: 15 resistance terms (lognormal) and 15 load terms (normal), all independent. Thirty-dimensional reliability problem intended to exercise subset-simulation or adaptive IS.",
+ "source": null,
+ "spec": {
+  "random_variables": [
+   {
+    "name": "R01",
+    "distribution": "lognormal",
+    "mean": 100.0,
+    "std": 20.0,
+    "description": "resistance R01",
+    "extra_params": {}
+   },
+   {
+    "name": "R02",
+    "distribution": "lognormal",
+    "mean": 100.0,
+    "std": 20.0,
+    "description": "resistance R02",
+    "extra_params": {}
+   },
+   {
+    "name": "R03",
+    "distribution": "lognormal",
+    "mean": 100.0,
+    "std": 20.0,
+    "description": "resistance R03",
+    "extra_params": {}
+   },
+   {
+    "name": "R04",
+    "distribution": "lognormal",
+    "mean": 100.0,
+    "std": 20.0,
+    "description": "resistance R04",
+    "extra_params": {}
+   },
+   {
+    "name": "R05",
+    "distribution": "lognormal",
+    "mean": 100.0,
+    "std": 20.0,
+    "description": "resistance R05",
+    "extra_params": {}
+   },
+   {
+    "name": "R06",
+    "distribution": "lognormal",
+    "mean": 100.0,
+    "std": 20.0,
+    "description": "resistance R06",
+    "extra_params": {}
+   },
+   {
+    "name": "R07",
+    "distribution": "lognormal",
+    "mean": 100.0,
+    "std": 20.0,
+    "description": "resistance R07",
+    "extra_params": {}
+   },
+   {
+    "name": "R08",
+    "distribution": "lognormal",
+    "mean": 100.0,
+    "std": 20.0,
+    "description": "resistance R08",
+    "extra_params": {}
+   },
+   {
+    "name": "R09",
+    "distribution": "lognormal",
+    "mean": 100.0,
+    "std": 20.0,
+    "description": "resistance R09",
+    "extra_params": {}
+   },
+   {
+    "name": "R10",
+    "distribution": "lognormal",
+    "mean": 100.0,
+    "std": 20.0,
+    "description": "resistance R10",
+    "extra_params": {}
+   },
+   {
+    "name": "R11",
+    "distribution": "lognormal",
+    "mean": 100.0,
+    "std": 20.0,
+    "description": "resistance R11",
+    "extra_params": {}
+   },
+   {
+    "name": "R12",
+    "distribution": "lognormal",
+    "mean": 100.0,
+    "std": 20.0,
+    "description": "resistance R12",
+    "extra_params": {}
+   },
+   {
+    "name": "R13",
+    "distribution": "lognormal",
+    "mean": 100.0,
+    "std": 20.0,
+    "description": "resistance R13",
+    "extra_params": {}
+   },
+   {
+    "name": "R14",
+    "distribution": "lognormal",
+    "mean": 100.0,
+    "std": 20.0,
+    "description": "resistance R14",
+    "extra_params": {}
+   },
+   {
+    "name": "R15",
+    "distribution": "lognormal",
+    "mean": 100.0,
+    "std": 20.0,
+    "description": "resistance R15",
+    "extra_params": {}
+   },
+   {
+    "name": "S01",
+    "distribution": "normal",
+    "mean": 75.0,
+    "std": 10.0,
+    "description": "load S01",
+    "extra_params": {}
+   },
+   {
+    "name": "S02",
+    "distribution": "normal",
+    "mean": 75.0,
+    "std": 10.0,
+    "description": "load S02",
+    "extra_params": {}
+   },
+   {
+    "name": "S03",
+    "distribution": "normal",
+    "mean": 75.0,
+    "std": 10.0,
+    "description": "load S03",
+    "extra_params": {}
+   },
+   {
+    "name": "S04",
+    "distribution": "normal",
+    "mean": 75.0,
+    "std": 10.0,
+    "description": "load S04",
+    "extra_params": {}
+   },
+   {
+    "name": "S05",
+    "distribution": "normal",
+    "mean": 75.0,
+    "std": 10.0,
+    "description": "load S05",
+    "extra_params": {}
+   },
+   {
+    "name": "S06",
+    "distribution": "normal",
+    "mean": 75.0,
+    "std": 10.0,
+    "description": "load S06",
+    "extra_params": {}
+   },
+   {
+    "name": "S07",
+    "distribution": "normal",
+    "mean": 75.0,
+    "std": 10.0,
+    "description": "load S07",
+    "extra_params": {}
+   },
+   {
+    "name": "S08",
+    "distribution": "normal",
+    "mean": 75.0,
+    "std": 10.0,
+    "description": "load S08",
+    "extra_params": {}
+   },
+   {
+    "name": "S09",
+    "distribution": "normal",
+    "mean": 75.0,
+    "std": 10.0,
+    "description": "load S09",
+    "extra_params": {}
+   },
+   {
+    "name": "S10",
+    "distribution": "normal",
+    "mean": 75.0,
+    "std": 10.0,
+    "description": "load S10",
+    "extra_params": {}
+   },
+   {
+    "name": "S11",
+    "distribution": "normal",
+    "mean": 75.0,
+    "std": 10.0,
+    "description": "load S11",
+    "extra_params": {}
+   },
+   {
+    "name": "S12",
+    "distribution": "normal",
+    "mean": 75.0,
+    "std": 10.0,
+    "description": "load S12",
+    "extra_params": {}
+   },
+   {
+    "name": "S13",
+    "distribution": "normal",
+    "mean": 75.0,
+    "std": 10.0,
+    "description": "load S13",
+    "extra_params": {}
+   },
+   {
+    "name": "S14",
+    "distribution": "normal",
+    "mean": 75.0,
+    "std": 10.0,
+    "description": "load S14",
+    "extra_params": {}
+   },
+   {
+    "name": "S15",
+    "distribution": "normal",
+    "mean": 75.0,
+    "std": 10.0,
+    "description": "load S15",
+    "extra_params": {}
+   }
+  ],
+  "limit_state_expr": "R01 + R02 + R03 + R04 + R05 + R06 + R07 + R08 + R09 + R10 + R11 + R12 + R13 + R14 + R15 - (S01 + S02 + S03 + S04 + S05 + S06 + S07 + S08 + S09 + S10 + S11 + S12 + S13 + S14 + S15)",
+  "correlation": {
+   "matrix": []
+  }
+ },
+ "meta": {
+  "dim": 30,
+  "linearity": "linear",
+  "expected_pf": "~1e-5",
+  "note": "high-dim, SuS-friendly"
+ }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "p04_column_buckling_euler",
+  "description": "Slender column, Euler buckling check. Elastic modulus E and moment of inertia I are lognormal; column length L is normal with small CoV; axial load P is Gumbel.",
+  "source": null,
+  "spec": {
+    "random_variables": [
+      {
+        "name": "E",
+        "distribution": "lognormal",
+        "mean": 200000.0,
+        "std": 10000.0,
+        "description": "elastic modulus (MPa)",
+        "extra_params": {}
+      },
+      {
+        "name": "I",
+        "distribution": "lognormal",
+        "mean": 8.33e-06,
+        "std": 4e-07,
+        "description": "second moment (m^4)",
+        "extra_params": {}
+      },
+      {
+        "name": "L",
+        "distribution": "normal",
+        "mean": 3.0,
+        "std": 0.03,
+        "description": "column length (m)",
+        "extra_params": {}
+      },
+      {
+        "name": "P",
+        "distribution": "gumbel",
+        "mean": 1000.0,
+        "std": 200.0,
+        "description": "axial load (kN)",
+        "extra_params": {}
+      }
+    ],
+    "limit_state_expr": "(3.14159265 ** 2) * E * 1000.0 * I / (L ** 2) - P",
+    "correlation": {
+      "matrix": []
+    }
+  },
+  "meta": {
+    "dim": 4,
+    "linearity": "mild_nonlinear",
+    "expected_pf": "~1e-3",
+    "note": "division, power"
+  }
+}

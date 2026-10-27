@@ -1,0 +1,8 @@
+# External imports of reliability_llm/ (not an installable package; not install-tested).
+# Use with this directory on the import path, e.g. PYTHONPATH=03_solver_code from the package root.
+numpy
+scipy
+pydantic>=2
+
+# Optional: solvers/_era/FORM_HLRF.py uses autograd for LSF gradients and falls back to numpy without it.
+# autograd

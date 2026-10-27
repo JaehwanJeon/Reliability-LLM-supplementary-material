@@ -1,0 +1,38 @@
+{
+ "id": "p11_beta_bounded",
+ "description": "Quality factor X bounded to [0,1] modelled as Beta. Applied stress ratio Y normal with small mean. Failure when X below threshold plus noise.",
+ "source": null,
+ "spec": {
+  "random_variables": [
+   {
+    "name": "X",
+    "distribution": "beta",
+    "mean": 0.65,
+    "std": 0.08,
+    "description": "quality factor",
+    "extra_params": {
+     "support_lower": 0.0,
+     "support_upper": 1.0
+    }
+   },
+   {
+    "name": "Y",
+    "distribution": "normal",
+    "mean": 0.1,
+    "std": 0.03,
+    "description": "stress-utilization noise",
+    "extra_params": {}
+   }
+  ],
+  "limit_state_expr": "X - 0.35 - Y",
+  "correlation": {
+   "matrix": []
+  }
+ },
+ "meta": {
+  "dim": 2,
+  "linearity": "linear",
+  "expected_pf": "~1e-2",
+  "note": "beta with extra_params"
+ }
+}

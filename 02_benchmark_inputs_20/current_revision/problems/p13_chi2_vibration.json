@@ -1,0 +1,35 @@
+{
+  "id": "p13_chi2_vibration",
+  "description": "Vibration serviceability band: the response V must stay within C of the nominal 6.0; deviating either way fails it (two-sided / bimodal), which breaks FORM. Non-rare.",
+  "source": null,
+  "spec": {
+    "random_variables": [
+      {
+        "name": "V",
+        "distribution": "chi_square",
+        "mean": 6.0,
+        "std": 3.464,
+        "description": "response chi-square k=6",
+        "extra_params": {}
+      },
+      {
+        "name": "C",
+        "distribution": "normal",
+        "mean": 4.0,
+        "std": 0.6,
+        "description": "capacity",
+        "extra_params": {}
+      }
+    ],
+    "limit_state_expr": "C - np.abs(V - 6.0)",
+    "correlation": {
+      "matrix": []
+    }
+  },
+  "meta": {
+    "dim": 2,
+    "linearity": "linear",
+    "expected_pf": "~5e-2",
+    "note": "chi-square distribution"
+  }
+}

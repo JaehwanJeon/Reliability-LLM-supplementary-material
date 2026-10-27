@@ -1,0 +1,76 @@
+{
+  "id": "p09_pile_group_correlated",
+  "description": "Pile group, weakest-pile (series) failure: the minimum of three correlated pile capacities must carry the shared demand. The min() kinks the surface so FORM is unreliable. Non-rare.",
+  "source": null,
+  "spec": {
+    "random_variables": [
+      {
+        "name": "cu1",
+        "distribution": "lognormal",
+        "mean": 60.0,
+        "std": 15.0,
+        "description": "undrained strength pile 1 (kPa)",
+        "extra_params": {}
+      },
+      {
+        "name": "cu2",
+        "distribution": "lognormal",
+        "mean": 60.0,
+        "std": 15.0,
+        "description": "undrained strength pile 2 (kPa)",
+        "extra_params": {}
+      },
+      {
+        "name": "cu3",
+        "distribution": "lognormal",
+        "mean": 60.0,
+        "std": 15.0,
+        "description": "undrained strength pile 3 (kPa)",
+        "extra_params": {}
+      },
+      {
+        "name": "Q",
+        "distribution": "gumbel",
+        "mean": 120.0,
+        "std": 30.0,
+        "description": "axial load per pile (kN)",
+        "extra_params": {}
+      }
+    ],
+    "limit_state_expr": "np.minimum(np.minimum(cu1, cu2), cu3) - Q / 3.0",
+    "correlation": {
+      "matrix": [
+        [
+          1.0,
+          0.5,
+          0.5,
+          0.0
+        ],
+        [
+          0.5,
+          1.0,
+          0.5,
+          0.0
+        ],
+        [
+          0.5,
+          0.5,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  },
+  "meta": {
+    "dim": 4,
+    "linearity": "linear",
+    "expected_pf": "~1e-2",
+    "note": "correlated cohesive strengths"
+  }
+}

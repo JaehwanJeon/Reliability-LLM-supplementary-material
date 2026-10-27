@@ -1,0 +1,99 @@
+{
+  "id": "p10_offshore_jacket_10rv",
+  "description": "Offshore jacket structure: five resistance contributions from members (lognormal) and five load contributions from environmental actions (Gumbel). Linear LSF, 10 independent variables.",
+  "source": null,
+  "spec": {
+    "random_variables": [
+      {
+        "name": "R1",
+        "distribution": "lognormal",
+        "mean": 1000.0,
+        "std": 150.0,
+        "description": "member capacity 1",
+        "extra_params": {}
+      },
+      {
+        "name": "R2",
+        "distribution": "lognormal",
+        "mean": 1000.0,
+        "std": 150.0,
+        "description": "member capacity 2",
+        "extra_params": {}
+      },
+      {
+        "name": "R3",
+        "distribution": "lognormal",
+        "mean": 1000.0,
+        "std": 150.0,
+        "description": "member capacity 3",
+        "extra_params": {}
+      },
+      {
+        "name": "R4",
+        "distribution": "lognormal",
+        "mean": 1000.0,
+        "std": 150.0,
+        "description": "member capacity 4",
+        "extra_params": {}
+      },
+      {
+        "name": "R5",
+        "distribution": "lognormal",
+        "mean": 1000.0,
+        "std": 150.0,
+        "description": "member capacity 5",
+        "extra_params": {}
+      },
+      {
+        "name": "S1",
+        "distribution": "gumbel",
+        "mean": 500.0,
+        "std": 100.0,
+        "description": "environmental load 1",
+        "extra_params": {}
+      },
+      {
+        "name": "S2",
+        "distribution": "gumbel",
+        "mean": 500.0,
+        "std": 100.0,
+        "description": "environmental load 2",
+        "extra_params": {}
+      },
+      {
+        "name": "S3",
+        "distribution": "gumbel",
+        "mean": 500.0,
+        "std": 100.0,
+        "description": "environmental load 3",
+        "extra_params": {}
+      },
+      {
+        "name": "S4",
+        "distribution": "gumbel",
+        "mean": 500.0,
+        "std": 100.0,
+        "description": "environmental load 4",
+        "extra_params": {}
+      },
+      {
+        "name": "S5",
+        "distribution": "gumbel",
+        "mean": 500.0,
+        "std": 100.0,
+        "description": "environmental load 5",
+        "extra_params": {}
+      }
+    ],
+    "limit_state_expr": "R1+R2+R3+R4+R5 - (S1+S2+S3+S4+S5)",
+    "correlation": {
+      "matrix": []
+    }
+  },
+  "meta": {
+    "dim": 10,
+    "linearity": "linear",
+    "expected_pf": "~1e-4",
+    "note": "medium dim, rare-ish"
+  }
+}

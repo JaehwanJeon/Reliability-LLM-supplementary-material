@@ -1,0 +1,95 @@
+{
+  "id": "p16_bridge_girder_correlated_loads",
+  "description": "Highway bridge girder. Resistance (Fy * Z) is independent, but the three live-load contributions (Mlive_lane1/2/3) share a traffic correlation of 0.4.",
+  "source": null,
+  "spec": {
+    "random_variables": [
+      {
+        "name": "Fy",
+        "distribution": "lognormal",
+        "mean": 350.0,
+        "std": 20.0,
+        "description": "yield strength (MPa)",
+        "extra_params": {}
+      },
+      {
+        "name": "Z",
+        "distribution": "normal",
+        "mean": 600.0,
+        "std": 10.0,
+        "description": "section modulus (cm^3)",
+        "extra_params": {}
+      },
+      {
+        "name": "M1",
+        "distribution": "gumbel",
+        "mean": 50.0,
+        "std": 10.0,
+        "description": "live load lane 1",
+        "extra_params": {}
+      },
+      {
+        "name": "M2",
+        "distribution": "gumbel",
+        "mean": 50.0,
+        "std": 10.0,
+        "description": "live load lane 2",
+        "extra_params": {}
+      },
+      {
+        "name": "M3",
+        "distribution": "gumbel",
+        "mean": 50.0,
+        "std": 10.0,
+        "description": "live load lane 3",
+        "extra_params": {}
+      }
+    ],
+    "limit_state_expr": "Fy * Z / 1000.0 - (M1 + M2 + M3)",
+    "correlation": {
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.4,
+          0.4
+        ],
+        [
+          0.0,
+          0.0,
+          0.4,
+          1.0,
+          0.4
+        ],
+        [
+          0.0,
+          0.0,
+          0.4,
+          0.4,
+          1.0
+        ]
+      ]
+    }
+  },
+  "meta": {
+    "dim": 5,
+    "linearity": "strong_nonlinear",
+    "expected_pf": "~1e-3",
+    "note": "correlated live loads"
+  }
+}

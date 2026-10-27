@@ -1,0 +1,35 @@
+{
+  "id": "p03_concrete_compression",
+  "description": "Short concrete column under axial compression. Compressive strength fc and applied stress sigma are both lognormally distributed.",
+  "source": null,
+  "spec": {
+    "random_variables": [
+      {
+        "name": "fc",
+        "distribution": "lognormal",
+        "mean": 32.0,
+        "std": 5.0,
+        "description": "compressive strength (MPa)",
+        "extra_params": {}
+      },
+      {
+        "name": "sigma",
+        "distribution": "lognormal",
+        "mean": 10.0,
+        "std": 2.2,
+        "description": "applied stress (MPa)",
+        "extra_params": {}
+      }
+    ],
+    "limit_state_expr": "fc - sigma",
+    "correlation": {
+      "matrix": []
+    }
+  },
+  "meta": {
+    "dim": 2,
+    "linearity": "linear",
+    "expected_pf": "~1e-2",
+    "note": "lognormal pair"
+  }
+}

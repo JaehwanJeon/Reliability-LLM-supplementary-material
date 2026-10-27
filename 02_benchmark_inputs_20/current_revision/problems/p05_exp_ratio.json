@@ -1,0 +1,35 @@
+{
+  "id": "p05_exp_ratio",
+  "description": "Nonlinear limit state used to stress SORM and sampling methods: failure surface depends on an exponential of the ratio of two independent normal variables.",
+  "source": null,
+  "spec": {
+    "random_variables": [
+      {
+        "name": "X1",
+        "distribution": "normal",
+        "mean": 1.0,
+        "std": 0.2,
+        "description": "driver",
+        "extra_params": {}
+      },
+      {
+        "name": "X2",
+        "distribution": "normal",
+        "mean": 1.0,
+        "std": 0.2,
+        "description": "denominator",
+        "extra_params": {}
+      }
+    ],
+    "limit_state_expr": "np.exp(X1 / X2) - 1.5",
+    "correlation": {
+      "matrix": []
+    }
+  },
+  "meta": {
+    "dim": 2,
+    "linearity": "strong_nonlinear",
+    "expected_pf": "~1e-2",
+    "note": "exp nonlinearity"
+  }
+}

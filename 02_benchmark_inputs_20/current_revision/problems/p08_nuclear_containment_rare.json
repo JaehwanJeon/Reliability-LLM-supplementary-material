@@ -1,0 +1,35 @@
+{
+  "id": "p08_nuclear_containment_rare",
+  "description": "Nuclear containment pressure check. Very high reliability target; expected Pf ~1e-7. Intended to stress subset-simulation-class methods.",
+  "source": null,
+  "spec": {
+    "random_variables": [
+      {
+        "name": "Pcap",
+        "distribution": "lognormal",
+        "mean": 500.0,
+        "std": 30.0,
+        "description": "containment pressure capacity (kPa)",
+        "extra_params": {}
+      },
+      {
+        "name": "Pdem",
+        "distribution": "gumbel",
+        "mean": 220.0,
+        "std": 36.0,
+        "description": "internal pressure demand (kPa)",
+        "extra_params": {}
+      }
+    ],
+    "limit_state_expr": "Pcap - Pdem",
+    "correlation": {
+      "matrix": []
+    }
+  },
+  "meta": {
+    "dim": 2,
+    "linearity": "linear",
+    "expected_pf": "~1e-7",
+    "note": "rare event, SuS territory"
+  }
+}

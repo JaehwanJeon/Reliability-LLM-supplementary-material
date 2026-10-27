@@ -1,0 +1,35 @@
+{
+  "id": "p01_rs_normal",
+  "description": "Simple resistance-load problem. Resistance R and load effect S are both normally distributed and independent. Failure occurs when the load exceeds the resistance.",
+  "source": null,
+  "spec": {
+    "random_variables": [
+      {
+        "name": "R",
+        "distribution": "normal",
+        "mean": 100.0,
+        "std": 12.0,
+        "description": "resistance",
+        "extra_params": {}
+      },
+      {
+        "name": "S",
+        "distribution": "normal",
+        "mean": 40.0,
+        "std": 8.0,
+        "description": "load effect",
+        "extra_params": {}
+      }
+    ],
+    "limit_state_expr": "R - S",
+    "correlation": {
+      "matrix": []
+    }
+  },
+  "meta": {
+    "dim": 2,
+    "linearity": "linear",
+    "expected_pf": "~3e-3",
+    "note": "textbook FORM"
+  }
+}

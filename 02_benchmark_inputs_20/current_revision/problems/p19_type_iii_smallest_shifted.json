@@ -1,0 +1,37 @@
+{
+  "id": "p19_type_iii_smallest_shifted",
+  "description": "Minimum strength with mechanical threshold epsilon below which the material cannot fall. Uses Type III Smallest with epsilon = 50.",
+  "source": null,
+  "spec": {
+    "random_variables": [
+      {
+        "name": "Rmin",
+        "distribution": "type_iii_smallest",
+        "mean": 100.0,
+        "std": 15.0,
+        "description": "shifted minimum capacity",
+        "extra_params": {
+          "epsilon": 50.0
+        }
+      },
+      {
+        "name": "L",
+        "distribution": "normal",
+        "mean": 70.0,
+        "std": 10.0,
+        "description": "applied load",
+        "extra_params": {}
+      }
+    ],
+    "limit_state_expr": "Rmin - L",
+    "correlation": {
+      "matrix": []
+    }
+  },
+  "meta": {
+    "dim": 2,
+    "linearity": "linear",
+    "expected_pf": "~3e-2",
+    "note": "type_iii_smallest with extra_params"
+  }
+}

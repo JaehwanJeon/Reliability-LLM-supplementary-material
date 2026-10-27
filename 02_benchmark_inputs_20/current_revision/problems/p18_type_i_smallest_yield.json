@@ -1,0 +1,35 @@
+{
+  "id": "p18_type_i_smallest_yield",
+  "description": "Minimum yield strength across specimens drawn from a Type I Smallest distribution. Applied demand is lognormal.",
+  "source": null,
+  "spec": {
+    "random_variables": [
+      {
+        "name": "Fmin",
+        "distribution": "type_i_smallest",
+        "mean": 280.0,
+        "std": 25.0,
+        "description": "minimum yield (MPa)",
+        "extra_params": {}
+      },
+      {
+        "name": "D",
+        "distribution": "lognormal",
+        "mean": 180.0,
+        "std": 30.0,
+        "description": "applied demand (MPa)",
+        "extra_params": {}
+      }
+    ],
+    "limit_state_expr": "Fmin - D",
+    "correlation": {
+      "matrix": []
+    }
+  },
+  "meta": {
+    "dim": 2,
+    "linearity": "linear",
+    "expected_pf": "~1e-2",
+    "note": "type_i_smallest"
+  }
+}
